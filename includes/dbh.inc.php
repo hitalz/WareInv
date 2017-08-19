@@ -1,9 +1,9 @@
 <?php
 	//Database connection variables
-	$host = 'localhost';
-	$user = 'root';
-	$password = 'root';
-	$db = 'inventory';
+	$host = 'localhost';	// host name
+	$user = 'root';	// MySQL username
+	$password = 'root';	// MySQL password
+	$db = 'inventory';	// database name
 
 	$conn = mysqli_connect($host, $user, $password, $db);
 
