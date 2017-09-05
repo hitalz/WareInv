@@ -17,11 +17,10 @@
     $_SESSION['username'] = $row['username'];
     $_SESSION['first_name'] = $row['first_name'];
     $_SESSION['last_name'] = $row['last_name'];
-    $_SESSION['active'] = $row['active'];
 
     // This is how we'll know the user is logged in
     $_SESSION['logged_in'] = true;
 
-    header("Location: ../inventory/dashboard.php");
+    header("Location: ../dashboard/inventory.php");
   }
 ?>
