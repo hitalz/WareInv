@@ -173,7 +173,7 @@
                       while ($row = $sql->fetch_assoc()) {
                         $CountryName = $row['country_name'];
                         ?>
-                        <option value="<?= $row['country_id']; ?>"><?php echo $CountryName ?></<</option>
+                        <option value="<?= $row['country_id']; ?>"><?php echo $CountryName ?></option>
                       <?php
                       }
                     ?>
