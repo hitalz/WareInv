@@ -1,5 +1,5 @@
 <?php
-  require 'includes/dbh.inc.php';
+  require 'include/dbh.inc.php';
   session_start();
 ?>
 
@@ -20,7 +20,7 @@
 
     <div class="container">
 
-      <form class="form-signin" action="includes/login.inc.php" method="post" autocomplete="off">
+      <form class="form-signin" action="include/login.inc.php" method="post" autocomplete="off">
         <h2 class="form-signin-heading">Warehouse Inventory</h2>
         <hr>
         <input type="email" name="username" id="inputEmail" class="form-control" placeholder="Username" autofocus>
