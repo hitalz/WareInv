@@ -16,41 +16,6 @@
     VALUES ('$customerName', '$customerAddress', '$customerCity', '$customerState', '$customerZip', '$customerCountry')
     ";
 
-    if(mysqli_query($conn, $addCustomerQuery)) {
-      $customerQuery = "
-      SELECT customer.*, state.*, country.*
-      FROM customer, state, country
-      WHERE customer.state_id = state.state_id AND customer.country_id=country.country_id
-      ORDER BY customer.customer_name
-      ";
-      $runCustomersQuqery = mysqli_query($conn, $customerQuery);
-      $output .= '
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>Customer Name</th>
-            <th>Address</th>
-            <th>City</th>
-            <th>State</th>
-            <th>ZIP</th>
-            <th>Country</th>
-          </tr>
-        </thead>';
-      while($row = mysqli_fetch_array($runCustomersQuery)) {
-        $output .= '
-        <tbody>
-          <tr>
-            <td>' . $row["customer_name"] . '</td>
-            <td>' . $row["customer_address"] . '</td>
-            <td>' . $row["customer_city"] . '</td>
-            <td>' . $row["state_abbr"] . '</td>
-            <td>' . $row["customer_zip"] . '</td>
-            <td>' . $row["country_abbr"] . '</td>
-          </tr>
-        </tbody>';
-      }
-      $output .= '
-      </table>';
-    }
+    $runCustomerQuery = mysqli_query($conn, $addCustomerQuery);
   }
 ?>

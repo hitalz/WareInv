@@ -11,7 +11,7 @@
       $first_name = $_SESSION['first_name'];
       $last_name = $_SESSION['last_name'];
       $customersQuery="
-      SELECT customer.*, state.*, country.*
+      SELECT *
       FROM customer, state, country
       WHERE customer.state_id = state.state_id AND customer.country_id=country.country_id
       ORDER BY customer.customer_name
@@ -81,7 +81,7 @@
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h2 class="sub-header">Customers</h2>
-          <div id="customerTable" class="table-responsive">
+          <div class="table-responsive">
             <table class="table table-striped">
               <thead>
                 <tr>
@@ -183,7 +183,7 @@
             </div>
             <br />
             <input type="button" name="cancel" id="cancel" value="Cancel" class="btn" data-dismiss="modal" />
-            <input type="submit" name="insert" id="insert" value="Add Customer" class="btn btn-primary" />
+            <input type="submit" name="insertCustomer" id="insertCustomer" value="Add Customer" class="btn btn-primary" />
           </form>
         </div>
       </div>
